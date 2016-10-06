@@ -6,7 +6,7 @@ function Play() {}
 Play.prototype = {
 	create: function() {
 		this.game.physics.startSystem(Phaser.Physics.ARCADE);
-		this.sprite = this.game.add.sprite(this.game.width / 2, this.game.height / 2, 'phaser-logo');
+		this.sprite = this.game.add.sprite(this.game.width / 2, this.game.height / 2, 'game-logo');
 		this.sprite.inputEnabled = true;
 
 		this.game.physics.arcade.enable(this.sprite);
@@ -21,7 +21,7 @@ Play.prototype = {
 
 	},
 	clickListener: function() {
-		this.game.state.start('gameover');
+		this.game.state.start('finish');
 	}
 };
 
